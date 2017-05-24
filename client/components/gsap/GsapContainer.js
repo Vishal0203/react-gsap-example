@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import {Paper} from 'material-ui';
 import {Grid} from 'react-flexbox-grid';
+import {TweenLite, CSSPlugin} from 'gsap';
 import {overlayColor, brandColor} from 'Assets/theme/application.theme';
 
 class LandingContainer extends Component {
@@ -25,7 +26,7 @@ class LandingContainer extends Component {
     // TweenLite.set(box, {x: '+=100px', scale: 0.6, delay: 1});
     // TweenLite.set(box, {x: '-50%', scale: 1, delay: 2});
 
-    TweenLite.fromTo(box, 2, {x: '-=200px'}, {x: 150});
+    TweenLite.fromTo(box, 2, {x: '-=200px'}, {x: 150, ease: Power4.easeOut});
   }
 
   render() {
